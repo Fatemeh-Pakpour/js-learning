@@ -193,4 +193,11 @@ console.log(flatMovies);
   'One Hundred Years of Solitude',
   'Candide' ] */
 
- 
+  //  how to map a function 
+
+  githubUser =["fafa","aina21", "azin"];
+  function show(user){
+    return `${user} is lovely`;
+  }
+  const showUsernaem = githubUser.map(show);
+console.log(showUsernaem);
