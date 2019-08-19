@@ -1,4 +1,4 @@
-/* function isDiagonalMatrix(matrix){
+function isDiagonalMatrix(matrix){
     for(let i = 0; i <matrix.length; i++ ){
         for(let j = 0; j < matrix.length; j++ ){
             if(i !== j && matrix[i][j] !== 0){
@@ -29,7 +29,7 @@ arrayPreviousLess([3, 5, 2, 4, 5]);
 //  [-1, 3, -1, 2, 4]
 console.log(previousLess); */
 
-/* let num = 0;
+ let num = 0;
 let i = 2;
 function hailstoneSequence(n) {
     while(n != 1)
@@ -45,7 +45,7 @@ function hailstoneSequence(n) {
 }
 }
 
-console.log(hailstoneSequence(5)); */
+console.log(hailstoneSequence(5)); 
 
 function hailstoneSequence(n) {
   const sequence = [];
