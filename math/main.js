@@ -12,3 +12,19 @@ function isDiagonalMatrix(matrix){
 console.log(isDiagonalMatrix([[1, 0, 0], [0, 5, 0], [0, 0, 3] ])); 
 console.log(isDiagonalMatrix([[1, 0, 0], [0, 5, 0], [2, 0, 3] ])); 
 
+const previousLess = [];
+function arrayPreviousLess(items) {
+    let firstElement = -1;
+for (let i = 0 ; i <= items.length-1; i++) {
+    if (firstElement < items[i]){
+        previousLess.push(firstElement);
+    }
+    else {
+        previousLess.push(-1);
+    }
+    firstElement = items[i]
+}
+}
+arrayPreviousLess([3, 5, 2, 4, 5]); 
+//  [-1, 3, -1, 2, 4]
+console.log(previousLess);
