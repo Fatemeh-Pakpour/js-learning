@@ -63,22 +63,30 @@ function properOrImproper(a) {
   }
  
   console.log(properOrImproper([-2,3]));
-let digits = " ";
-  function digitsProduct(product) {
-    if(product === 0) return 10;
-    if(product === 1) return 1;
-    for (let i = 9; i > 1 ; i--){
-       while(product % i ===0) {
-         product = product/i;
-         digits = product.toString()+ digits;
-       } 
 
-    }
 
-if (product >1){
-  return -1;
+/**
+ *Given an integer product, find the smallest positive (i.e. greater than 0) 
+ integer the product of whose digits is equal to product. If there is
+  no such integer, return -1 instead.
+ * 
+ * @param {*} product => that is the number
+ * @returns
+ */
+function digitsProduct(product) {
+  if(product == 0) return 10;
+  if(product == 1) return 1;
+  let digits = "";
+  for( let divisor = 9; divisor > 1; divisor--) {
+      while(product % divisor == 0) {
+          product =  product/divisor;
+          digits = divisor.toString()+ digits;
+      }
+  }
+  
+  if(product > 1) return -1;
+  
+  return parseInt(digits, 10)
 }
-return parseInt(digits, 10)
-}
-console.log(digitsProduct(1));
-console.log(digits);
+
+console.log(digitsProduct( 450));
