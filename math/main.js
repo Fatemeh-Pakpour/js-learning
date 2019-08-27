@@ -63,3 +63,22 @@ function properOrImproper(a) {
   }
  
   console.log(properOrImproper([-2,3]));
+let digits = " ";
+  function digitsProduct(product) {
+    if(product === 0) return 10;
+    if(product === 1) return 1;
+    for (let i = 9; i > 1 ; i--){
+       while(product % i ===0) {
+         product = product/i;
+         digits = product.toString()+ digits;
+       } 
+
+    }
+
+if (product >1){
+  return -1;
+}
+return parseInt(digits, 10)
+}
+console.log(digitsProduct(1));
+console.log(digits);
